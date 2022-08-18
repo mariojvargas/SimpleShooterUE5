@@ -1,0 +1,707 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "SimpleShooterUE5 Win64 Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"Win64",
+				"Debug",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 Win64 Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"Win64",
+				"Debug",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"SimpleShooterUE5 Win64 Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 Win64 Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"Win64",
+				"Debug",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 Win64 DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"Win64",
+				"DebugGame",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 Win64 DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"Win64",
+				"DebugGame",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"SimpleShooterUE5 Win64 DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 Win64 DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"Win64",
+				"DebugGame",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 Win64 Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"Win64",
+				"Development",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 Win64 Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"Win64",
+				"Development",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"SimpleShooterUE5 Win64 Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 Win64 Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"Win64",
+				"Development",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 Win64 Test Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"Win64",
+				"Test",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 Win64 Test Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"Win64",
+				"Test",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"SimpleShooterUE5 Win64 Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 Win64 Test Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"Win64",
+				"Test",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 Win64 Shipping Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"Win64",
+				"Shipping",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 Win64 Shipping Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"Win64",
+				"Shipping",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"SimpleShooterUE5 Win64 Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 Win64 Shipping Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"Win64",
+				"Shipping",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 IOS Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"IOS",
+				"Debug",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 IOS Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"IOS",
+				"Debug",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"SimpleShooterUE5 IOS Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 IOS Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"IOS",
+				"Debug",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 IOS DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"IOS",
+				"DebugGame",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 IOS DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"IOS",
+				"DebugGame",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"SimpleShooterUE5 IOS DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 IOS DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"IOS",
+				"DebugGame",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 IOS Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"IOS",
+				"Development",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 IOS Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"IOS",
+				"Development",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"SimpleShooterUE5 IOS Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 IOS Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"IOS",
+				"Development",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 IOS Test Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"IOS",
+				"Test",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 IOS Test Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"IOS",
+				"Test",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"SimpleShooterUE5 IOS Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 IOS Test Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"IOS",
+				"Test",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 IOS Shipping Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"IOS",
+				"Shipping",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 IOS Shipping Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"IOS",
+				"Shipping",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"SimpleShooterUE5 IOS Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5 IOS Shipping Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"SimpleShooterUE5",
+				"IOS",
+				"Shipping",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5Editor Win64 Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SimpleShooterUE5Editor",
+				"Win64",
+				"Debug",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5Editor Win64 Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SimpleShooterUE5Editor",
+				"Win64",
+				"Debug",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"SimpleShooterUE5Editor Win64 Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5Editor Win64 Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"SimpleShooterUE5Editor",
+				"Win64",
+				"Debug",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5Editor Win64 DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SimpleShooterUE5Editor",
+				"Win64",
+				"DebugGame",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5Editor Win64 DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SimpleShooterUE5Editor",
+				"Win64",
+				"DebugGame",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"SimpleShooterUE5Editor Win64 DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5Editor Win64 DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"SimpleShooterUE5Editor",
+				"Win64",
+				"DebugGame",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5Editor Win64 Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SimpleShooterUE5Editor",
+				"Win64",
+				"Development",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5Editor Win64 Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"SimpleShooterUE5Editor",
+				"Win64",
+				"Development",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"SimpleShooterUE5Editor Win64 Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		},
+		{
+			"label": "SimpleShooterUE5Editor Win64 Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"SimpleShooterUE5Editor",
+				"Win64",
+				"Development",
+				"D:\\Unreal Projects\\SimpleShooterUE5\\SimpleShooterUE5.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Epic Games\\UE_5.0"
+			}
+		}
+	]
+}

@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "SimpleShooterUE5Editor Editor Win64 Development (SimpleShooterUE5)",
+            "intelliSenseMode": "msvc-x64",
+            "compileCommands": "D:\\Unreal Projects\\SimpleShooterUE5\\.vscode\\compileCommands_SimpleShooterUE5.json",
+            "cStandard": "c17",
+            "cppStandard": "c++17"
+        },
+        {
+            "name": "Win32",
+            "intelliSenseMode": "msvc-x64",
+            "compileCommands": "D:\\Unreal Projects\\SimpleShooterUE5\\.vscode\\compileCommands_Default.json",
+            "cStandard": "c17",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}
