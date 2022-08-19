@@ -32,4 +32,6 @@ private:
 	UPROPERTY(VisibleAnywhere)
 	class USkeletalMeshComponent* SkeletalMesh = nullptr;
 
+	UPROPERTY(EditAnywhere)
+	UParticleSystem* MuzzleFlash = nullptr;
 };
