@@ -20,6 +20,16 @@
 		"directory": "D:\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
 	{
+		"file": "D:\\Unreal Projects\\SimpleShooterUE5\\Source\\SimpleShooterUE5\\ShooterAIController.cpp",
+		"command": "\"D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.32.31326\\bin\\HostX64\\x64\\cl.exe\" @\"D:\\Unreal Projects\\SimpleShooterUE5\\.vscode\\compileCommands_Default\\SimpleShooterUE5.211.rsp\"",
+		"directory": "D:\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "D:\\Unreal Projects\\SimpleShooterUE5\\Source\\SimpleShooterUE5\\ShooterAIController.h",
+		"command": "\"D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.32.31326\\bin\\HostX64\\x64\\cl.exe\" @\"D:\\Unreal Projects\\SimpleShooterUE5\\.vscode\\compileCommands_Default\\SimpleShooterUE5.211.rsp\"",
+		"directory": "D:\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
 		"file": "D:\\Unreal Projects\\SimpleShooterUE5\\Source\\SimpleShooterUE5\\ShooterCharacter.cpp",
 		"command": "\"D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.32.31326\\bin\\HostX64\\x64\\cl.exe\" @\"D:\\Unreal Projects\\SimpleShooterUE5\\.vscode\\compileCommands_Default\\SimpleShooterUE5.211.rsp\"",
 		"directory": "D:\\Epic Games\\UE_5.0\\Engine\\Source"
