@@ -37,5 +37,42 @@ void AGun::PullTrigger()
 	if (MuzzleFlash)
 	{
 		UGameplayStatics::SpawnEmitterAttached(MuzzleFlash,  SkeletalMesh, TEXT("MuzzleFlashSocket"));
+
+		APawn* OwnerPawn = Cast<APawn>(GetOwner());
+		if (!OwnerPawn)
+		{
+			return;
+		}
+
+		AController* OwnerController = OwnerPawn->GetController();
+		if (!OwnerController)
+		{
+			return;
+		}
+
+		FVector PlayerViewPointLocation;
+		FRotator PlayerViewPointRotation;
+		OwnerController->GetPlayerViewPoint(PlayerViewPointLocation, PlayerViewPointRotation);
+		
+		FVector End = PlayerViewPointLocation + PlayerViewPointRotation.Vector() * MaxRange;
+
+		FHitResult HitResult;
+		bool bHitSuccess = GetWorld()->LineTraceSingleByChannel(
+			HitResult, 
+			PlayerViewPointLocation, 
+			End, 
+			ECollisionChannel::ECC_GameTraceChannel1
+		);
+
+		if (bHitSuccess && ImpactEffect)
+		{
+			FVector ShotDirection = -PlayerViewPointRotation.Vector();
+			UGameplayStatics::SpawnEmitterAtLocation(
+				GetWorld(), 
+				ImpactEffect, 
+				HitResult.ImpactPoint, 
+				ShotDirection.Rotation()
+			);
+		}
 	}
 }
