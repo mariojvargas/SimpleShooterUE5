@@ -73,6 +73,13 @@ void AGun::PullTrigger()
 				HitResult.ImpactPoint, 
 				ShotDirection.Rotation()
 			);
+
+			AActor* ImpactedActor = HitResult.GetActor();
+			if (ImpactedActor)
+			{
+				FPointDamageEvent BulletDamageEvent(Damage, HitResult, ShotDirection, nullptr);
+				ImpactedActor->TakeDamage(Damage, BulletDamageEvent, OwnerController, this);
+			}
 		}
 	}
 }
