@@ -3,3 +3,7 @@
 
 #include "SimpleShooterUE5GameModeBase.h"
 
+
+void ASimpleShooterUE5GameModeBase::PawnKilled(APawn* DeadPawn)
+{
+}

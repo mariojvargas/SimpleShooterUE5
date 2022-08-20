@@ -4,6 +4,7 @@
 #include "ShooterCharacter.h"
 #include "Gun.h"
 #include "Components/CapsuleComponent.h"
+#include "SimpleShooterUE5GameModeBase.h"
 
 // Sets default values
 AShooterCharacter::AShooterCharacter()
@@ -88,8 +89,15 @@ float AShooterCharacter::TakeDamage(float DamageAmount, struct FDamageEvent cons
 
 	if (IsDead())
 	{
+		ASimpleShooterUE5GameModeBase *GameMode = GetWorld()->GetAuthGameMode<ASimpleShooterUE5GameModeBase>();
+		if (GameMode)
+		{
+			GameMode->PawnKilled(this);
+		}
+
 		DetachFromControllerPendingDestroy();
 		GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
 	}
 
 	return DamageToApply;
