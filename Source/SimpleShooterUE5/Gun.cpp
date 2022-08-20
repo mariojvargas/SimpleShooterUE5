@@ -32,46 +32,65 @@ void AGun::Tick(float DeltaTime)
 
 }
 
+bool AGun::TryBulletImpactTrace(FHitResult& OutHitResult, FVector& OutShotDirection)
+{
+	AController* OwnerController = GetOwnerController();
+	if (!OwnerController)
+	{
+		return false;
+	}
+
+	FVector PlayerViewPointLocation;
+	FRotator PlayerViewPointRotation;
+	OwnerController->GetPlayerViewPoint(PlayerViewPointLocation, PlayerViewPointRotation);
+	
+	FVector End = PlayerViewPointLocation + PlayerViewPointRotation.Vector() * MaxRange;
+
+	OutShotDirection = -PlayerViewPointRotation.Vector();
+
+	FCollisionQueryParams CollisionQueryParams;
+	CollisionQueryParams.AddIgnoredActor(this);
+	CollisionQueryParams.AddIgnoredActor(GetOwner());
+
+
+	return GetWorld()->LineTraceSingleByChannel(
+		OutHitResult, 
+		PlayerViewPointLocation, 
+		End, 
+		ECollisionChannel::ECC_GameTraceChannel1,
+		CollisionQueryParams
+	);
+}
+
+AController* AGun::GetOwnerController() const
+{
+	APawn* OwnerPawn = Cast<APawn>(GetOwner());
+	if (OwnerPawn)
+	{
+		return OwnerPawn->GetController();
+	}
+
+	return nullptr;
+}
+
 void AGun::PullTrigger()
 {
 	if (MuzzleFlash)
 	{
 		UGameplayStatics::SpawnEmitterAttached(MuzzleFlash,  SkeletalMesh, TEXT("MuzzleFlashSocket"));
 
-		APawn* OwnerPawn = Cast<APawn>(GetOwner());
-		if (!OwnerPawn)
-		{
-			return;
-		}
-
-		AController* OwnerController = OwnerPawn->GetController();
+		AController* OwnerController = GetOwnerController();
 		if (!OwnerController)
 		{
 			return;
 		}
 
-		FVector PlayerViewPointLocation;
-		FRotator PlayerViewPointRotation;
-		OwnerController->GetPlayerViewPoint(PlayerViewPointLocation, PlayerViewPointRotation);
-		
-		FVector End = PlayerViewPointLocation + PlayerViewPointRotation.Vector() * MaxRange;
-
-		FCollisionQueryParams CollisionQueryParams;
-		CollisionQueryParams.AddIgnoredActor(this);
-		CollisionQueryParams.AddIgnoredActor(GetOwner());
-
 		FHitResult HitResult;
-		bool bHitSuccess = GetWorld()->LineTraceSingleByChannel(
-			HitResult, 
-			PlayerViewPointLocation, 
-			End, 
-			ECollisionChannel::ECC_GameTraceChannel1,
-			CollisionQueryParams
-		);
-
+		FVector ShotDirection;
+		bool bHitSuccess = TryBulletImpactTrace(HitResult, ShotDirection);
+		
 		if (bHitSuccess && ImpactEffect)
 		{
-			FVector ShotDirection = -PlayerViewPointRotation.Vector();
 			UGameplayStatics::SpawnEmitterAtLocation(
 				GetWorld(), 
 				ImpactEffect, 

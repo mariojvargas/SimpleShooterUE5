@@ -43,4 +43,8 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	float Damage = 10.f;
+
+	bool TryBulletImpactTrace(FHitResult& OutHitResult, FVector& OutShotDirection);
+
+	AController* GetOwnerController() const;
 };
