@@ -16,4 +16,9 @@ class SIMPLESHOOTERUE5_API AKillEmAllGameMode : public ASimpleShooterUE5GameMode
 
 public:
 	virtual void PawnKilled(APawn* DeadPawn) override;
+
+private:
+	void EndGame(bool bPlayerIsWinner);
+	bool AreAllEnemiesDead() const;
+	bool IsMainPlayer(const APawn* Pawn) const;
 };

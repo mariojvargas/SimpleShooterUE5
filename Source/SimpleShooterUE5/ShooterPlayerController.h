@@ -22,5 +22,10 @@ private:
 	TSubclassOf<class UUserWidget> LoseScreenClass = nullptr;
 
 	UPROPERTY(EditAnywhere)
+	TSubclassOf<class UUserWidget> VictoryScreenClass = nullptr;
+
+	UPROPERTY(EditAnywhere)
 	float RestartDelay = 5.f;
+
+	void DisplayMatchResultScreen(bool bPlayerIsWinner);
 };
