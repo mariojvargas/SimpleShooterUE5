@@ -19,5 +19,8 @@ public:
 
 private:
 	UPROPERTY(EditAnywhere)
+	TSubclassOf<class UUserWidget> LoseScreenClass = nullptr;
+
+	UPROPERTY(EditAnywhere)
 	float RestartDelay = 5.f;
 };
