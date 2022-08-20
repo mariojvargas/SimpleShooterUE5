@@ -1,5 +1,25 @@
 [
 	{
+		"file": "D:\\Unreal Projects\\SimpleShooterUE5\\Source\\SimpleShooterUE5\\BTService_PlayerLocation.cpp",
+		"command": "\"D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.32.31326\\bin\\HostX64\\x64\\cl.exe\" @\"D:\\Unreal Projects\\SimpleShooterUE5\\.vscode\\compileCommands_SimpleShooterUE5\\SimpleShooterUE5.211.rsp\"",
+		"directory": "D:\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "D:\\Unreal Projects\\SimpleShooterUE5\\Source\\SimpleShooterUE5\\BTService_PlayerLocation.h",
+		"command": "\"D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.32.31326\\bin\\HostX64\\x64\\cl.exe\" @\"D:\\Unreal Projects\\SimpleShooterUE5\\.vscode\\compileCommands_SimpleShooterUE5\\SimpleShooterUE5.211.rsp\"",
+		"directory": "D:\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "D:\\Unreal Projects\\SimpleShooterUE5\\Source\\SimpleShooterUE5\\BTService_PlayerLocationIfSeen.cpp",
+		"command": "\"D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.32.31326\\bin\\HostX64\\x64\\cl.exe\" @\"D:\\Unreal Projects\\SimpleShooterUE5\\.vscode\\compileCommands_SimpleShooterUE5\\SimpleShooterUE5.211.rsp\"",
+		"directory": "D:\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "D:\\Unreal Projects\\SimpleShooterUE5\\Source\\SimpleShooterUE5\\BTService_PlayerLocationIfSeen.h",
+		"command": "\"D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.32.31326\\bin\\HostX64\\x64\\cl.exe\" @\"D:\\Unreal Projects\\SimpleShooterUE5\\.vscode\\compileCommands_SimpleShooterUE5\\SimpleShooterUE5.211.rsp\"",
+		"directory": "D:\\Epic Games\\UE_5.0\\Engine\\Source"
+	},
+	{
 		"file": "D:\\Unreal Projects\\SimpleShooterUE5\\Source\\SimpleShooterUE5\\BTTask_ClearBlackboardValue.cpp",
 		"command": "\"D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.32.31326\\bin\\HostX64\\x64\\cl.exe\" @\"D:\\Unreal Projects\\SimpleShooterUE5\\.vscode\\compileCommands_SimpleShooterUE5\\SimpleShooterUE5.211.rsp\"",
 		"directory": "D:\\Epic Games\\UE_5.0\\Engine\\Source"
