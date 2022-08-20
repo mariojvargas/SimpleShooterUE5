@@ -6,9 +6,39 @@
 #include "Blueprint/UserWidget.h"
 
 
+void AShooterPlayerController::BeginPlay()
+{
+    Super::BeginPlay();
+
+    HUD = AddWidgetToViewport(HUDClass);
+}
+
+UUserWidget* AShooterPlayerController::AddWidgetToViewport(const TSubclassOf<class UUserWidget>& WidgetClass)
+{
+    if (!WidgetClass)
+    {
+        return nullptr;
+    }
+    
+    UUserWidget* Widget = CreateWidget(this, WidgetClass);
+    if (Widget)
+    {
+        Widget->AddToViewport();
+
+        return Widget;
+    }
+
+    return nullptr;
+}
+
 void AShooterPlayerController::GameHasEnded(AActor* EndGameFocus, bool bIsWinner)
 {
     Super::GameHasEnded(EndGameFocus, bIsWinner);
+
+    if (HUD)
+    {
+        HUD->RemoveFromViewport();
+    }
 
     DisplayMatchResultScreen(bIsWinner);
 
@@ -18,19 +48,12 @@ void AShooterPlayerController::GameHasEnded(AActor* EndGameFocus, bool bIsWinner
 
 void AShooterPlayerController::DisplayMatchResultScreen(bool bPlayerIsWinner)
 {
-    UUserWidget* ScreenToDisplay;
-
     if (bPlayerIsWinner)
     {
-        ScreenToDisplay = CreateWidget(this, VictoryScreenClass);
+        AddWidgetToViewport(VictoryScreenClass);
     }
     else
     {
-        ScreenToDisplay = CreateWidget(this, LoseScreenClass);
-    }
-
-    if (ScreenToDisplay)
-    {
-        ScreenToDisplay->AddToViewport();
+        AddWidgetToViewport(LoseScreenClass);
     }
 }

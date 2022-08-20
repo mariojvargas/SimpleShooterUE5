@@ -17,6 +17,10 @@ class SIMPLESHOOTERUE5_API AShooterPlayerController : public APlayerController
 public:
 	virtual void GameHasEnded(class AActor* EndGameFocus = nullptr, bool bIsWinner = false) override;
 
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
 private:
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<class UUserWidget> LoseScreenClass = nullptr;
@@ -25,7 +29,15 @@ private:
 	TSubclassOf<class UUserWidget> VictoryScreenClass = nullptr;
 
 	UPROPERTY(EditAnywhere)
+	TSubclassOf<class UUserWidget> HUDClass = nullptr;
+
+	UPROPERTY(EditAnywhere)
 	float RestartDelay = 5.f;
 
+	UPROPERTY()
+	class UUserWidget* HUD = nullptr;
+
 	void DisplayMatchResultScreen(bool bPlayerIsWinner);
+
+	class UUserWidget* AddWidgetToViewport(const TSubclassOf<class UUserWidget>& Widget);
 };
