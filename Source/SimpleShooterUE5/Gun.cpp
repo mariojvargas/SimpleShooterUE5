@@ -78,18 +78,26 @@ void AGun::PullTrigger()
 	if (MuzzleFlash)
 	{
 		UGameplayStatics::SpawnEmitterAttached(MuzzleFlash,  SkeletalMesh, TEXT("MuzzleFlashSocket"));
+	}
 
-		AController* OwnerController = GetOwnerController();
-		if (!OwnerController)
-		{
-			return;
-		}
+	if (MuzzleSound)
+	{
+		UGameplayStatics::SpawnSoundAttached(MuzzleSound, SkeletalMesh, TEXT("MuzzleFlashSocket"));
+	}
 
-		FHitResult HitResult;
-		FVector ShotDirection;
-		bool bHitSuccess = TryBulletImpactTrace(HitResult, ShotDirection);
-		
-		if (bHitSuccess && ImpactEffect)
+	AController* OwnerController = GetOwnerController();
+	if (!OwnerController)
+	{
+		return;
+	}
+
+	FHitResult HitResult;
+	FVector ShotDirection;
+	bool bHitSuccess = TryBulletImpactTrace(HitResult, ShotDirection);
+	
+	if (bHitSuccess)
+	{
+		if (ImpactEffect)
 		{
 			UGameplayStatics::SpawnEmitterAtLocation(
 				GetWorld(), 
@@ -97,13 +105,18 @@ void AGun::PullTrigger()
 				HitResult.ImpactPoint, 
 				ShotDirection.Rotation()
 			);
+		}
 
-			AActor* ImpactedActor = HitResult.GetActor();
-			if (ImpactedActor)
-			{
-				FPointDamageEvent BulletDamageEvent(Damage, HitResult, ShotDirection, nullptr);
-				ImpactedActor->TakeDamage(Damage, BulletDamageEvent, OwnerController, this);
-			}
+		if (ImpactSound)
+		{
+			UGameplayStatics::PlaySoundAtLocation(GetWorld(), ImpactSound, HitResult.ImpactPoint);
+		}
+		
+		AActor* ImpactedActor = HitResult.GetActor();
+		if (ImpactedActor)
+		{
+			FPointDamageEvent BulletDamageEvent(Damage, HitResult, ShotDirection, nullptr);
+			ImpactedActor->TakeDamage(Damage, BulletDamageEvent, OwnerController, this);
 		}
 	}
 }
