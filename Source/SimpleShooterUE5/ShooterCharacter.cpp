@@ -85,8 +85,6 @@ float AShooterCharacter::TakeDamage(float DamageAmount, struct FDamageEvent cons
 
 	Health -= DamageToApply;
 	
-	UE_LOG(LogTemp, Warning, TEXT("Damage Taken! Health [%f]"), Health);
-
 	if (IsDead())
 	{
 		ASimpleShooterUE5GameModeBase *GameMode = GetWorld()->GetAuthGameMode<ASimpleShooterUE5GameModeBase>();
@@ -106,4 +104,9 @@ float AShooterCharacter::TakeDamage(float DamageAmount, struct FDamageEvent cons
 bool AShooterCharacter::IsDead() const
 {
 	return Health <= 0;
+}
+
+float AShooterCharacter::GetHealthPercentage() const
+{
+	return Health / MaxHealth;
 }
